@@ -1,0 +1,114 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+/* 공통 */
+#wrap{
+  width: 100%;
+  font-family: 'Judson', serif;
+  color: #0D0C0C;
+}
+html{scroll-behavior: smooth;}
+
+/* //// GALLERY //// */
+section{
+  width: 1200px;
+  margin: auto;
+}
+.gallery-txt{
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 100%;
+  height: 54px;
+  position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 27px;
+}
+.gallery-txt:before, 
+.gallery-txt:after{
+  content: '';
+  background-color: #0D0C0C;
+  width: 454px;
+  height: 1px;
+  position: absolute;
+  top: 27px;
+}
+.gallery-txt:before{left: 0;}
+.gallery-txt:after{right: 0;}
+
+.gallery-txt span{
+  text-transform: capitalize;
+  font-size: 30px;
+}
+.gallery-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin-bottom: 90px;
+}
+.gitem{
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.gitem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.35s;
+}
+.gitem:first-child{
+  grid-area: span 2 / span 2;
+  height: 525px;
+}
+.gitem:last-child{grid-column: span 2;}
+
+.gitem:nth-child(3) img{
+  transform: scale(0.6);
+}
+.gitem ul{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  color: #fff;
+  opacity: 0;
+  transition: 0.35s;
+}
+.gitem:nth-of-type(1) ul,
+.gitem:nth-of-type(8) ul{
+  padding: 0 40px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+.gitem li h4{
+  font-weight: 400;
+  font-size: 18px;
+}
+.gitem ul li:last-child{
+  font-weight: 200;
+
+}
+.gitem:hover ul{
+  opacity: 1;
+}
+.gitem:not(:nth-child(3)):hover img{
+  transform: scale(1.1);
+}
+.gitem:nth-child(3):hover img{
+  transform: scale(0.7);
+}
+
+.bigitem ul li:last-child{text-align: left;}

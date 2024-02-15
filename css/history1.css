@@ -1,0 +1,320 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+/* 공통 */
+#wrap{
+  width: 100%;
+  font-family: 'Judson', serif;
+  color: #0D0C0C;
+}
+html{scroll-behavior: smooth;}
+
+iframe{
+  outline: none;
+  border: 0;
+}
+
+/* //// OUR HISTORY - 01 //// */
+#sub2{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 540px;
+}
+.h-header-caption{
+  width: 1200px;
+  margin: auto;
+  text-align: right;
+  transform: translateY(70px);
+  animation: history-title linear 0.5s;
+}
+@keyframes history-title{
+  0% {
+    transform: translate(110px, 70px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(60px, 70px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0px, 70px);
+    opacity: 1;
+  }
+}
+
+.h-header-caption h1{
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.h-header-caption p{
+  color: #bbb;
+}
+
+section{
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
+.h-section:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 160px;
+  border-left : 1px solid #aaa;
+  height : 840px;
+  z-index: -1;
+}
+section>img{
+  position: absolute;
+  top: -260px;
+  left: 0;
+  width: 500px;
+  /* transform: rotate(-6deg); */
+  animation: history-mimg ease-in-out 3.5s infinite;
+}
+@keyframes history-mimg{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.section1{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 140px 0 0;
+  /* border: 1px solid blue; */
+}
+.section1 .h-contents{
+  /* border: 1px solid red; */
+  width: 550px;
+  height: 520px;
+  position: relative;
+}
+.h-contents .h-des{
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  z-index: 10;
+}
+.h-des h3{
+  width: 370px;
+  text-transform: capitalize;
+  font-size: 30px;
+  margin-bottom: 36px;
+}
+.h-des p{
+  width: 370px;
+  text-indent: 10px;
+  line-height: 22px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 200;
+}
+.h-des p strong{font-weight: 400;}
+
+.h-images{
+  position: relative;
+  width: 650px;
+  height: 350px;
+}
+.h-images img{position: absolute;}
+.h-images img:first-child{
+  width: 203px;
+  bottom: 0;
+  left: 0;
+}
+.h-images img:last-child{
+  width: 434px;
+  top: 0;
+  right: 0;
+}
+
+.section2{
+  width: 1200px;
+  height: 800px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin-top: 180px;
+}
+.section2 .h2-images{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 105px;
+}
+.section2 .h2-images img{
+  width: 110px;
+  margin: 30px 0;
+  filter: grayscale(1);
+  transition: 0.35s;
+}
+.section2 .h2-images img:hover{
+  filter: none;
+}
+.section2>img{
+  height: 700px;
+  position: absolute;
+  top: 240px;
+  right: -190px;
+  z-index: -1;
+}
+
+/* section3 */
+.section3{
+  /* border: 1px solid #000; */
+  display: flex;
+  position: relative;
+  padding: 100px 0 80px;
+  width: 1200px;
+}
+.section3:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  border-left : 1px solid #aaa;
+  height : 840px;
+  z-index: -1;
+}
+.section3 .h-contents2{
+  position: absolute;
+  top: 190px;
+  right: 0px;
+  /* border: 1px solid #000; */
+}
+
+/*Tab Menu ----------------------------------*/
+#tabmenu{
+  width:790px;
+  height:500px;
+  margin:60px 0;
+  position: relative;
+  display: flex;
+}
+.tab-header{
+  width: 130px;
+  position: relative;
+  left: 200px;
+}
+.tab_box{
+  width: 130px;
+  height: 230px;
+  position: absolute;
+  bottom: 0;
+}
+.tab{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tab li{
+  width:130px; 
+  height:50px; /*->jQuery에서 탭메뉴 움직이는 거리: 60px*/
+  margin-bottom: 10px;
+  box-sizing:border-box;
+  float:left;
+  font-size:20px;
+  line-height:50px;
+  text-align:center;
+  letter-spacing:1px; 
+  position:relative;
+  cursor: pointer;
+  z-index:100;
+}
+.tab li:not(.active){
+  background-color: #eee;
+}
+.tab li.active{color:#fff;} /*1번째 선택된 글자색 */
+.tab-highlight{  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
+  background:#72153B; 
+  width: 130px;
+  height:50px; 
+  position:absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+/*Tab Mneu Contents ---------------------------------------*/
+.tab-contents{width: 600px;}
+.tab-contents div{
+  width: 790px;
+  height: 500px;
+  display:none;
+  font-family: 'Jost', sans-serif;
+  position: relative;
+}
+.tab-contents div.active{display:block}
+
+.tab-contents>div{
+  position: relative;
+}
+.h-title, .h-description{
+  position: absolute;
+  left: 0;
+  margin: 25px;
+}
+.h-title{
+  font-size:30px;
+  font-weight:normal;
+  text-transform:uppercase;
+  color: #fff;
+  margin-bottom:25px;
+  bottom: 50px;
+}
+.h-description {
+  width: 65%;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 200;
+  line-height:22px;
+  bottom: 0;
+  text-indent: 3px;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+
+
+
+footer{position: relative;}
+footer:after{
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  background: url(../image/footer-pattern.png);
+}
+
+
+
+/* //// OUR HISTORY - 02 //// */
+/* //// SUSTAINABILITY - 01 //// */
+/* //// SUSTAINABILITY - 02 //// */
+/* //// SUSTAINABILITY - 03 //// */
+/* //// GALLERY */

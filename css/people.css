@@ -1,0 +1,216 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+/* 공통 */
+#wrap{
+  width: 100%;
+  font-family: 'Judson', serif;
+  color: #0D0C0C;
+}
+html{scroll-behavior: smooth;}
+
+/* //// PEOPLE //// */
+.people_bg{background-color: #f8f8f8;}
+
+/* 공통 */
+.sub_lnb, .people1, .people2{
+	width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+/* --- 첫번째 콘텐츠 --- */
+.sub_lnb a{
+  display: inline-block;
+  width: 172px;
+  height: 42px;
+  line-height: 42px;
+  background-color: #eee;
+  margin: 80px 22px 180px;
+  text-transform: capitalize;
+  font-family: 'Jost', sans-serif;
+  color: #c5c5c5;
+}
+.sub_lnb a.active{
+  background-color: #0D0C0C;
+  color: #fff;
+}
+.sub_lnb a:hover:not(.active){
+  color: #4e4e4e;
+}
+.people1{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.p1, .p2{
+	width: 550px;
+	padding-bottom: 53px;
+}
+.p1 h3, .p2 h3{
+	font-size: 30px;
+	text-transform: capitalize;
+}
+.p1 p, .p2 p{
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	margin-top: 20px;
+	color: #393838;
+}
+
+/* 배너 */
+.pbanner{
+	position: relative;
+	width: 1200px;
+	height: 325px;
+	margin: 80px auto 0;
+}
+.pbanner .pban{
+	width: 1000px;
+	height: 295px;
+	overflow: hidden;
+	position: absolute;
+	top: 15px;
+	left: 100px;
+}
+.pbanner .pban ul{
+	display: flex;
+	position:relative;  
+}
+.pbanner .pban ul li{
+	margin-right: 35px;
+	width: 370px;  
+	height: 270px;
+	position: relative;
+}
+.pbanner .pban ul li:before{
+	content: 'view +';
+	position: absolute;
+	bottom: 23px;
+	right: 23px;
+	width: 132px;
+	height: 36px;
+	/* border: 1px solid #fff; */
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	font-size: 19px;
+	line-height: 36px;
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	opacity: 0;
+	z-index: 10;
+	cursor: pointer;
+	transition: 0.35s;
+}
+.pbanner .pban li img{
+  width: 370px;
+  object-fit: cover;
+	transition: 0.35s;
+}
+.pbanner .pban li:hover img{
+	filter: grayscale(1);
+}
+.pbanner .pban li:hover:before{
+	opacity: 1;
+}
+
+
+/*좌우버튼*/
+.pban_left{
+	position:absolute;
+	top:125px;
+	left:30px;
+	cursor:pointer;
+}
+.pban_right{
+	position:absolute;
+	top:125px;
+	right:30px;
+	cursor:pointer;
+}
+.pban_btn span{
+	display:inline-block;
+	width:40px;
+	height:40px;	
+}
+.parrow{
+	font-size: 40px;
+	color: #ddd;
+}
+.pban_btn span:hover{
+	color: #0D0C0C;
+	transition: 0.35s;
+}
+
+
+/* --- 두번째 콘텐츠 --- */
+.people2{
+	/* border: 1px solid #000; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	padding: 400px 0 300px;
+}
+.p2-imgs{
+	width: 500px;
+	height: 430px;
+	display: flex;
+	position: relative;
+}
+.p2-imgs img:first-child{
+	width: 428px;
+}
+.p2-imgs img:last-child{
+	position: absolute;
+	top: -80px;
+	right: 0;
+}
+
+
+/* --- 세번째 콘텐츠 --- */
+.people3{
+	background: url(../image/info_bg.jpg) no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 590px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.info-card{
+	width: 620px;
+	height: 280px;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	filter: drop-shadow(2px 2px 14px rgba(0,0,0,0.4));
+	text-align: center;
+}
+.info-card h5{
+	font-family: 'Jost', sans-serif;
+	font-size: 26px;
+	line-height: 30px;
+	margin-bottom: 34px;
+	font-weight: normal;
+}
+.info-card a{
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 200;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 200px;
+	height: 28px;
+	border: 1px solid #0D0C0C;
+	transition: 0.35s;
+}
+.info-card a:hover{
+	background-color: #0D0C0C;
+	color: #fff;
+}

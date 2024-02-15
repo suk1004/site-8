@@ -1,0 +1,92 @@
+/* 공통 */
+#wrap{
+  width: 100%;
+  font-family: 'Judson', serif;
+  color: #0D0C0C;
+}
+html{scroll-behavior: smooth;}
+
+/* //// footer style //// */
+footer{
+  width: 100%;
+  background-color: #0D0C0C;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+}
+footer hr{
+  border: 1px solid #969696;
+  opacity: 0.5;
+  transform: scaleY(0.5);
+}
+.shortcut, .foot_bottom{
+  width: 1200px;
+  margin: auto;
+}
+.shortcut{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px 0 14px;
+  text-transform: uppercase;
+}
+.shortcut>li{
+  margin: 0 30px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.shortcut>li a:hover{color: #acacac;}
+
+.foot_bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.foot_bottom li{
+  padding: 60px 0 30px;
+}
+.foot_bottom li h4{
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 25px;
+}
+.foot_bottom li p{
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+.sns_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns_logo div{
+  width: 37px;
+  height: 37px;
+  border: 1px solid #acacac;
+  border-radius: 50%;
+  margin-left: 16px;
+  text-align: center;
+  line-height: 42px;
+  transition: 0.35s;
+}
+.sns_logo div i{
+  font-size: 19px;
+  color: #acacac;
+  transition: 0.35s;
+}
+.sns_logo div:hover{
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.sns_logo div:hover i{
+  color: #0D0C0C;
+}
+
+
+
+
+
+
+
+

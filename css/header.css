@@ -1,0 +1,224 @@
+@import url(common.css);
+/* font-family: 'Jost', sans-serif; */
+/* font-family: 'Judson', serif; */
+/* font-family: "Noto Sans KR", sans-serif; */
+
+/* 공통 */
+#wrap{
+  width: 100%;
+  font-family: 'Judson', serif;
+  color: #0D0C0C;
+}
+html{scroll-behavior: smooth;}
+
+/* -------------- header Style ------------------- */
+header{
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+  position: fixed;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  z-index: 1000;
+}
+
+
+/* Header Active Class */
+header.active #notice_banner{
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+#notice_banner,
+nav{transition: 0.5;}
+
+/* notice - Top */
+/* 상단 공지배너 (공통) */
+#notice_banner{
+  width: 100%;
+  height: 30px;
+  background-color: #f8f5f5;
+}
+
+.noticeb .view{text-align:center;}
+.noticeb .view li{
+	display:none;
+	position:absolute;
+	top:0;
+	left:50%;
+  transform: translateX(-50%);
+	line-height:30px;
+}
+.noticeb .view li:first-child{display:block;}
+.noticeb .view li a{
+	font-size: 13px;
+	color: #a77288;
+	letter-spacing: 0.5px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* NAV */
+nav{
+  width: 100%;
+  height: 110px;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+
+/* Main Menu */
+.gnb{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb>.main{
+  width: 200px;
+  height: 80px;
+  text-align: center;
+  margin-right: 20px;
+  position: relative;
+  line-height: 80px;
+  /* transform: translateY(-10px); */
+}
+.gnb>.main:nth-child(3){
+  transform: translateY(-13px);
+}
+.gnb>.main>a{
+  font-size: 19px;
+  text-transform: capitalize;
+}
+/* .gnb>.main img{width: 96px;} */
+
+/* 오버시 나오는 도형 */
+.gnb>.main>a{position: relative;}
+.gnb>.main>a:not(:nth-of-type(3)):before{
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.gnb>.main:not(:nth-of-type(3)):hover a:before{opacity: 1;}
+
+/* Sub Menu */
+.sub{
+  width: 300px;
+  height: 34px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  line-height: 30px;
+  z-index: 1000; 
+  background-color: #0D0C0C;
+}
+.sub li a{
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 300;
+  line-height: 34px;
+}
+.sub li a:hover{color: #acacac;}
+
+/* 메인 공통 */
+main{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 540px;
+}
+main div h1{letter-spacing: 7px;}
+
+
+main>p{
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  z-index: -1;
+}
+#sub1{
+  background: url(../image/sub1main-01.webp) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+#sub2{
+  background: url(../image/sub2main.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+#sub2_2{
+  background: url(../image/sub2-2main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+#sub3{
+  background: url(../image/sub3main.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+#sub3_2{
+  background: url(../image/sub3-2main.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+#sub3_3{
+  background: url(../image/sub3-3main.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+#sub4{
+  background: url(../image/sub4main.png) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+.header-caption{
+  transform: translateY(70px);
+  animation: title linear 0.5s;
+}
+.header-caption h1{
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.header-caption p{color: #bbb;}
+
+
+@keyframes title{
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(110px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(70px);
+    opacity: 1;
+  }
+}
